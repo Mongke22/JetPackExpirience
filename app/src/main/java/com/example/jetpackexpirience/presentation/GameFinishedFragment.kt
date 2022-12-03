@@ -96,17 +96,4 @@ class GameFinishedFragment : Fragment() {
     private fun retryGame() {
         findNavController().popBackStack()
     }
-
-    companion object {
-
-        private const val GAME_RESULT = "game_result"
-
-        fun newInstance(game_result: GameResult): GameFinishedFragment {
-            return GameFinishedFragment().apply {
-                arguments = Bundle().apply {
-                    putParcelable(GAME_RESULT, game_result)
-                }
-            }
-        }
-    }
 }
